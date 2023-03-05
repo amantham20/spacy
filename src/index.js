@@ -5,6 +5,8 @@ import App from './App';
 import './input.css';
 import reportWebVitals from './reportWebVitals';
 
+
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,6 +17,7 @@ root.render(
   <Router>
     <Routes>
       <Route path="/" element={<App />} />
+      <Route path="*" element={<h1>404</h1>} />
     </Routes>
   </Router>
 );
