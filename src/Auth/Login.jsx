@@ -1,14 +1,25 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as RocketIcon } from './rocket-icon.svg';
+import firebaseApp from '../firebase_config.js';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
+const auth = getAuth(firebaseApp);
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(`Email: ${email}, Password: ${password}`);
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      setMessage(`Signed in as ${userCredential.user.email}`);
+      console.log("userCredential.user.email: ", userCredential.user.email);
+    } catch (error) {
+      setMessage(error.message);
+    }
   };
 
   return (
@@ -19,6 +30,7 @@ const LoginPage = () => {
           <h2 className="text-lg font-bold text-gray-800">Space Login</h2>
         </div>
         <form onSubmit={handleSubmit}>
+        {message && <p className="text-center text-red-500 mt-4">{message}</p>}
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email</label>
             <input

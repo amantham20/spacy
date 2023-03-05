@@ -5,7 +5,8 @@ import App from './App';
 import './input.css';
 import reportWebVitals from './reportWebVitals';
 
-import LoginPage from './Login/Login';
+import LoginPage from './Auth/Login';
+import SignupPage from './Auth/Signup';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -19,6 +20,7 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="*" element={<h1>404</h1>} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignupPage />} />
     </Routes>
   </Router>
 );
