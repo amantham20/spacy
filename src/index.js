@@ -8,6 +8,9 @@ import reportWebVitals from './reportWebVitals';
 import App from './App';
 import NotFound from './NotFound';
 import SpaceWarp from './SpaceWarp';
+import LoginPage from './Auth/Login';
+import SignupPage from './Auth/Signup';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,6 +24,9 @@ root.render(
       <Route path="*" element={<NotFound />} />
       <Route path="/test/wrap" element={<SpaceWarp />} />
       
+      <Route path="*" element={<h1>404</h1>} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignupPage />} />
     </Routes>
   </Router>
 );
