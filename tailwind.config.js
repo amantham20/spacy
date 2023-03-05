@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      zIndex: {
+        'n1': '-5',
+      }
+    },
   },
   plugins: [],
 }

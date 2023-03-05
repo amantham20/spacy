@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
-import App from './App';
 import './input.css';
 import reportWebVitals from './reportWebVitals';
 
-
-
+import App from './App';
+import NotFound from './NotFound';
+import SpaceWarp from './SpaceWarp';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,7 +18,9 @@ root.render(
   <Router>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="*" element={<h1>404</h1>} />
+      <Route path="*" element={<NotFound />} />
+      <Route path="/test/wrap" element={<SpaceWarp />} />
+      
     </Routes>
   </Router>
 );
