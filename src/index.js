@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 import LoginPage from './Auth/Login';
 import SignupPage from './Auth/Signup';
+import Feed from './Feed/Feed';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -21,6 +22,7 @@ root.render(
       <Route path="*" element={<h1>404</h1>} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
+      <Route path="/feed" element={<Feed />} />
     </Routes>
   </Router>
 );
