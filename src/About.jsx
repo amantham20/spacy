@@ -2,20 +2,23 @@ import React from 'react'
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { SiGithub } from 'react-icons/si';
 import { FiMail } from 'react-icons/fi';
+
+import HomepageHeader from './HomepageHeader/HomepageHeader';
+import HomepageFooter from './HomepageFooter/HomepageFooter';
 const About = () => {
   return (
     <>
-
+    <HomepageHeader />
     <div>
     <div className="min-h-screen bg-gray-900 flex flex-col items-center justify-center">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center mt-20">
         <h1 className="text-white text-4xl font-bold mb-4">Space Explorers</h1>
         <p className="text-gray-400 text-center mb-8">
           We are a team of space enthusiasts who love to explore the unknown and share our findings with the world.
         </p>
         
       </div>
-      <div className="flex flex-wrap w-1/3">
+      <div className="flex flex-wrap items-center lg:w-1/2">
         {/* centers all the items inside */}
         <div className="flex flex-col items-center bg-gray-800 rounded-lg shadow-lg m-4 p-8">
           
@@ -78,6 +81,7 @@ I also love spontaneously traveling, listening to overplayed music and consuming
   </div>
     </div>
 </div>
+<HomepageFooter />
 </>
 
   )

@@ -6,6 +6,8 @@ import { getAuth } from "firebase/auth";
 import firebaseApp from "../firebase_config.js";
 
 
+
+
 const db = getFirestore(firebaseApp);
 const auth = getAuth(firebaseApp);
 
