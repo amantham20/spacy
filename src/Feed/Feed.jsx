@@ -4,6 +4,8 @@ import { HeartIcon, ChatIcon } from "@heroicons/react/outline";
 import { HeartIcon as HeartIconSolid } from "@heroicons/react/solid";
 import { getAuth } from "firebase/auth";
 import firebaseApp from "../firebase_config.js";
+import HomepageFooter from "../HomepageFooter/HomepageFooter.jsx";
+import HomepageHead1 from "../HomepageHeader/HomepageHeader.jsx";
 
 
 
@@ -53,7 +55,9 @@ const Feed = () => {
   };
 
   return (
-    <div className="flex justify-center">
+    <>
+    <HomepageHead1 />
+    <div className="flex justify-center pt-20 pb-20 bg-gray-900">
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-1">
         {posts.map((post) => (
           <div key={post.id} className="bg-white rounded-lg shadow-md p-6">
@@ -104,6 +108,8 @@ const Feed = () => {
         ))}
       </div>
     </div>
+    <HomepageFooter />
+    </>
   );
 };
 

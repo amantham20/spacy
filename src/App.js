@@ -18,7 +18,7 @@ function App() {
           {/* add z index */}
           <div className="max-w-7xl" style={{zIndex:100}}>
           <h1 className="text-5xl text-white font-extrabold tracking-tight">
-            Welcome to Spacebook!
+            Welcome to Spacy!
           </h1>
           <p className="mt-5 text-xl text-gray-400">
             Connect with other space enthusiasts and share your love for the cosmos.
@@ -37,10 +37,10 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-              Discover Spacebook's features
+              Discover Spacy's features
             </h2>
             <p className="mt-4 text-xl text-gray-400">
-              From sharing your favorite space photos to connecting with other space enthusiasts, Spacebook has everything you need to stay up-to-date on the latest space news and events.
+              From sharing your favorite space photos to connecting with other space enthusiasts, Spacy has everything you need to stay up-to-date on the latest space news and events.
             </p>
           </div>
 

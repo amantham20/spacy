@@ -14,6 +14,9 @@ import Feed from './Feed/Feed';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './About';
+import AddPost from './Feed/AddPost';
+import News from './News';
+import Jobs from './Jobs';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -31,6 +34,9 @@ root.render(
       <Route path="/signup" element={<SignupPage />} />
       <Route path="/feed" element={<Feed />} />
       <Route path="/about" element={<About />} />
+      <Route path="/addpost" element={<AddPost />} />
+      <Route path="/news" element={<News />} />
+      <Route path="/jobs" element={<Jobs />} />
     </Routes>
   </Router>
 );

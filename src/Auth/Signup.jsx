@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import firebaseApp from '../firebase_config.js';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from 'react-router-dom';
 
 const auth = getAuth(firebaseApp);
 
@@ -9,12 +10,14 @@ const SignupPage = () => {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       setMessage(`Signed up as ${userCredential.user.email}`);
-      
+      navigate('/feed');
     } catch (error) {
       setMessage(error.message);
     }

@@ -22,7 +22,7 @@ const About = () => {
         {/* centers all the items inside */}
         <div className="flex flex-col items-center bg-gray-800 rounded-lg shadow-lg m-4 p-8">
           
-            <img src="https://avatars.githubusercontent.com/u/47064964?v=4" className="rounded-full w-32 h-32 mb-4" />
+            <img src="https://media.licdn.com/dms/image/C5103AQGHD7LSpP8Byg/profile-displayphoto-shrink_400_400/0/1581493392845?e=1683763200&v=beta&t=0Mj6Bk4hwCsSh4RREbEY45A8ihe_voN-qr20msyxjzE" className="rounded-full w-32 h-32 mb-4" />
 
           <h2 className="text-white text-xl font-bold mb-4">Rajmeet Bob Singh Chandok</h2>
 
@@ -49,7 +49,7 @@ const About = () => {
         </div>
         </div>
     <div className="flex flex-col items-center bg-gray-800 rounded-lg shadow-lg m-4 p-8">
-    <img src="https://avatars.githubusercontent.com/u/47064964?v=4" className="rounded-full w-32 h-32 mb-4" />
+    <img src="https://media.licdn.com/dms/image/C5603AQHveOz2griuOw/profile-displayphoto-shrink_400_400/0/1657648443680?e=1683763200&v=beta&t=EcknsbXUvmyT7mdzJ7Nu63DY3KH6tgKXZGpm-6SQx6s" className="rounded-full w-32 h-32 mb-4" />
 
       <h2 className="text-white text-xl font-bold mb-4">Aman Dhruva Thamminana</h2>
       <p className="text-gray-400 mb-4">
