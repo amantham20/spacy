@@ -1,7 +1,7 @@
 
 import './App.css';
 import HomepageHeader from './HomepageHeader/HomepageHeader';
-import HomepageFooter from './HompageFooter/HomepageFooter';
+import HomepageFooter from './HomepageFooter/HomepageFooter';
 import { Link } from 'react-router-dom';
 import SpaceWarp from './SpaceWarp';
 
