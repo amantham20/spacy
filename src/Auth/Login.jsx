@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ReactComponent as RocketIcon } from './rocket-icon.svg';
 import firebaseApp from '../firebase_config.js';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
@@ -11,12 +11,15 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       setMessage(`Signed in as ${userCredential.user.email}`);
       console.log("userCredential.user.email: ", userCredential.user.email);
+      navigate('/feed');
     } catch (error) {
       setMessage(error.message);
     }

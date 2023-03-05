@@ -13,6 +13,7 @@ import SignupPage from './Auth/Signup';
 import Feed from './Feed/Feed';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import About from './About';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -29,6 +30,7 @@ root.render(
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
       <Route path="/feed" element={<Feed />} />
+      <Route path="/about" element={<About />} />
     </Routes>
   </Router>
 );

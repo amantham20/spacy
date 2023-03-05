@@ -10,11 +10,13 @@ function App() {
     // write tailwind code from here
     <div className="App relative">
       <HomepageHeader/>
-      {/* Add the spacewarp as a background for the text */}
-     {/* make the div transparent */}
+      {/* Add a SpaceWrap component behind the hero section */}
+      <SpaceWarp/>
 
-    <div className="py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center bg-gray-900 min-h-screen">
-        <div className="max-w-7xl">
+          {/* hero section */}
+          <div className="py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center bg-gray-900 min-h-screen">
+          {/* add z index */}
+          <div className="max-w-7xl" style={{zIndex:100}}>
           <h1 className="text-5xl text-white font-extrabold tracking-tight">
             Welcome to Spacebook!
           </h1>
@@ -29,7 +31,7 @@ function App() {
           </Link>
         </div>
       </div>
-      {/* <SpaceWarp className=' absolute top-0 left-0 w-full h-full'/> */}
+
       {/* Features section */}
       <div className="bg-gray-800 py-12 sm:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
